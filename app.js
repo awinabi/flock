@@ -5,7 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressLayouts = require('express-ejs-layouts');
+var helmet = require('helmet');
+var session = require('express-session');
+const csurf = require('csurf');
 
+var posts = require('./routes/posts');
 var pages = require('./routes/pages');
 var users = require('./routes/users');
 
@@ -16,6 +20,25 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
+// helmet for security
+app.use(helmet());
+
+// configure express-session
+var sessionConfig = {
+  secret: 'testnews0078',
+  resave: false,
+  saveUninitialized: true,
+  name: '_session',
+  cookie: {}
+};
+
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1);
+  sessionConfig.cookie.secure = true;
+}
+
+app.use(session(sessionConfig));
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -24,7 +47,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', pages);
+// for CSRF protection using csurf
+var csrfMiddleware = csurf({ cookie: true });
+app.use(csrfMiddleware);
+
+// route namespaces
+app.use('/', posts);
+app.use('/p', pages);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

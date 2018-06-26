@@ -14815,7 +14815,13 @@ pre {
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 1.125rem;
     padding: 0.5rem 1.25rem; }
-
+.featured-posts {
+  background: #D7DDE8;  /* fallback for old browsers */
+ 
+}
+.featured-posts .card{
+  background: inherit;
+}
 .card-weather {
   background: #e1ecff;
   background-image: linear-gradient(to left bottom, #d6eef6, #dff0fa, #e7f3fc, #eff6fe, #f6f9ff); }
@@ -16553,6 +16559,10 @@ ul {
   .error-page .error-page-divider {
     border-left: 3px solid rgba(255, 255, 255, 0.2); } }
 
+.flag-icon{background-size:contain;background-position:50%;background-repeat:no-repeat;position:relative;display:inline-block;width:1.33333333em;line-height:1em}
+.flag-icon:before{content:"\00a0"}
+.flag-icon.flag-icon-squared{width:1em}
+.flag-icon-in{background-image:url(/images/flags/IN.png)}
 .today {
   height: 800px;
   padding: 5px 35px;
