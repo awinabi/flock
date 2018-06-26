@@ -16567,3 +16567,10 @@ ul {
   height: 800px;
   padding: 5px 35px;
 }
+.post-item{
+  border-bottom: 1px solid #CCCCCC;
+
+}
+.post-item:last-child{
+  border-bottom: 0;
+}
