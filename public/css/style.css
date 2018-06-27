@@ -13860,6 +13860,9 @@ input:focus {
   outline: none; }
 
 /* Fonts */
+.text-bluebell {
+  color: #182C61;
+}
 .text-twitter {
   color: #1da1f2; }
 
@@ -13904,6 +13907,10 @@ input:focus {
 
 .bg-bluebell {
   background-color: #182C61;
+}
+.bg-startup {
+  background-color: #e7efff;
+  border: 1px solid #AAA;
 }
 .bg-pinterest {
   background: #cc2127; }
@@ -14470,7 +14477,7 @@ html {
 
 .content-wrapper {
   background: #f2f8f9;
-  padding: 1.5rem 1.7rem;
+  padding: 0.6rem;
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1; }
@@ -14513,9 +14520,12 @@ pre {
       width: 100%; } }
 
 /* Utilities */
-.grid-margin, .purchace-popup > div {
-  margin-bottom: 25px; }
-
+.purchace-popup > div {
+   }
+.grid-margin {
+  margin-bottom: 25px;
+  padding-right: 0;
+}
 @media (min-width: 576px) {
   .grid-margin-sm-0 {
     margin-bottom: 0; } }
@@ -14817,7 +14827,9 @@ pre {
     padding: 0.5rem 1.25rem; }
 .featured-posts {
   background: #D7DDE8;  /* fallback for old browsers */
- 
+}
+.featured-posts.second {
+  height: 100%;
 }
 .featured-posts .card{
   background: inherit;
@@ -16568,9 +16580,15 @@ ul {
   padding: 5px 35px;
 }
 .post-item{
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #DEDEDE;
 
 }
 .post-item:last-child{
   border-bottom: 0;
+}
+.content-padding {
+  padding-right: 12.5px;
+}
+.brand-style {
+  font-family:'Baloo';
 }

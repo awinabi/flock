@@ -7,7 +7,9 @@ var posts = [
     stats: {
       comments: 1,
       likes: 5
-    }
+    },
+    tags: ['featured', 'charlie-sheen'],
+    featured: true
   },
   {
     title: 'Parity pricing For Ionic 2+ Apps',
@@ -17,7 +19,9 @@ var posts = [
     stats: {
       comments: 5,
       likes: 6
-    }
+    },
+    tags: ['featured', 'api-testing'],
+    featured: true
   },
   {
     title: 'MobX Introduction in Ionic Apps',
@@ -27,7 +31,33 @@ var posts = [
     stats: {
       comments: 1,
       likes: 5
-    }
+    },
+    tags: ['featured', 'ionic'],
+    featured: true
+  },
+  {
+    title: 'Getting started with Cypress automation',
+    description: 'Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.',
+    author: 'Awin Abi',
+    postedAt: new Date('2017-12-21T12:32:55Z').toDateString(),
+    stats: {
+      comments: 1,
+      likes: 5
+    },
+    tags: ['automation'],
+    featured: false
+  },
+  {
+    title: 'Setup your SauceLabs account for multi browser testing',
+    description: 'Our mission is to build a thriving, open source ecosystem that enhances productivity, makes testing an enjoyable experience, and generates developer happiness. We hold ourselves accountable to champion a testing process that actually works.',
+    author: 'Awin Abi',
+    postedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    stats: {
+      comments: 1,
+      likes: 5
+    },
+    tags: ['general'],
+    featured: false
   }
 ];
 
