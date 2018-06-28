@@ -8,8 +8,9 @@ var helmet = require('helmet');
 var session = require('express-session');
 const csurf = require('csurf');
 
-var posts = require('./routes/posts');
 var pages = require('./routes/pages');
+var posts = require('./routes/posts');
+var news =  require('./routes/news');
 var users = require('./routes/users');
 
 var app = express();
@@ -49,8 +50,9 @@ var csrfMiddleware = csurf({ cookie: true });
 app.use(csrfMiddleware);
 
 // route namespaces
-app.use('/', posts);
-app.use('/p', pages);
+app.use('/', pages);
+app.use('/posts', posts);
+app.use('/news', news);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

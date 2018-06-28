@@ -61,6 +61,187 @@ var posts = [
   }
 ];
 
+var news = [
+  {
+    title: 'JSON Parsing: Hacker news API on Android',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['api', 'react', 'hn'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'Google play new ranking algorithm causing massive drop of acquisition',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['api', 'graphql', 'algorithm'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'SQS lambda trigger now showing up!',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['sql'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'OpenPDF, a free Java library with a LGPL / MPL license',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: [],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'Connecting ReactJS Frontend with NodeJs Backend',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://zeolearn.com/awin/abcd',
+    domain: 'zeolearn.com',
+    tags: ['react', 'nodejs'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'How to use React’s experimental new Profiler feature',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['react'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'JSON Parsing: Hacker news API on Android',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['api', 'react', 'hn'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'Google play new ranking algorithm causing massive drop of acquisition',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['api', 'graphql', 'algorithm'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'SQS lambda trigger now showing up!',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['sql'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'OpenPDF, a free Java library with a LGPL / MPL license',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: [],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'Connecting ReactJS Frontend with NodeJs Backend',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://zeolearn.com/awin/abcd',
+    domain: 'zeolearn.com',
+    tags: ['react', 'nodejs'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'JSON Parsing: Hacker news API on Android',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['api', 'react', 'hn'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'Google play new ranking algorithm causing massive drop of acquisition',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['api', 'graphql', 'algorithm'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'SQS lambda trigger now showing up!',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: ['sql'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'OpenPDF, a free Java library with a LGPL / MPL license',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://medium.com/awin/abcd',
+    domain: 'medium.com',
+    tags: [],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  },
+  {
+    title: 'Connecting ReactJS Frontend with NodeJs Backend',
+    submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+    url: 'http://zeolearn.com/awin/abcd',
+    domain: 'zeolearn.com',
+    tags: ['react', 'nodejs'],
+    stats: {
+      comments: 9,
+      likes: 3 
+    }
+  }
+];
+
+
 module.exports = {
-  posts: posts
+  posts: posts,
+  news: news
 }

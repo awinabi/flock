@@ -5,12 +5,11 @@ var lodash = require('lodash');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  var posts = fixtures.posts;
+  var news = fixtures.news;
   var params = {
-    posts: posts,
-    featuredPost: lodash.first(posts)
+    news: news
   }
-  res.render('posts/index', params);
+  res.render('news/index', params);
 });
 
 module.exports = router;
