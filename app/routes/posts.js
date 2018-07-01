@@ -1,15 +1,16 @@
 var express = require('express');
-var fixtures = require('../fixtures');
+var fixtures = require('../../fixtures');
 var lodash = require('lodash');
 
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  var news = fixtures.news;
+  var posts = fixtures.posts;
   var params = {
-    news: news
+    posts: posts,
+    featuredPost: lodash.first(posts)
   }
-  res.render('news/index', params);
+  res.render('posts/index', params);
 });
 
 module.exports = router;
