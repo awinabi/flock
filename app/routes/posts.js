@@ -1,16 +1,22 @@
 var express = require('express');
-var fixtures = require('../../fixtures');
 var lodash = require('lodash');
+var Post = require('../models/post');
 
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  var posts = fixtures.posts;
-  var params = {
-    posts: posts,
-    featuredPost: lodash.first(posts)
-  }
-  res.render('posts/index', params);
+  Post
+    .fetchAll()
+    .then((rows) => {
+      var posts = rows.serialize();
+      
+      var params = {
+        otherPosts: lodash.filter(posts, { featured: false }) || [],
+        featuredPosts: lodash.filter(posts, { featured: true }) || [],
+      };
+      console.log(params);
+      res.render('posts/index', params);
+    });
 });
 
 module.exports = router;

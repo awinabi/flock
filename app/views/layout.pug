@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  include partials/_head.pug
+  body
+    .container-scroller
+      include partials/_navbar.pug
+      .container-fluid.page-body-wrapper
+        include partials/_sidebar.pug
+        .main-panel
+          .content-wrapper
+            .row.content-padding
+              .col-lg-8.grid-margin
+                != body
+
+              .col-lg-4.grid-margin
+                include partials/_rightbar.pug
+          include partials/_footer.pug
+
+    script(src='/vendors/js/vendor.bundle.base.js')
+    script(src='/vendors/js/vendor.bundle.addons.js')
+    script(src='/js/off-canvas.js')
+    script(src='/js/misc.js')
+    script(src='/js/dashboard.js')

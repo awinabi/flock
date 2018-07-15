@@ -1,0 +1,17 @@
+mixin featuredPost(post)
+  div
+    p
+      each postTag in post.tags.split(',')
+        span.badge.badge-primary.badge-pill= postTag
+        | &nbsp;
+    h3= post.title
+  .post-description.d-flex
+    .mr-auto
+      p= post.description
+  div
+    p.text-gray
+      small
+        span= post.publishedAt
+        span.px-1 &nbsp;
+        span By #{post.author}
+        span.px-1 &nbsp;

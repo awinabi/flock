@@ -1,3 +1,5 @@
+require('dotenv').load();
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -6,10 +8,15 @@ var bodyParser = require('body-parser');
 var expressLayouts = require('express-ejs-layouts');
 var helmet = require('helmet');
 var session = require('express-session');
-const csurf = require('csurf');
+var csurf = require('csurf');
+
+var responseLocals = require('./middleware/responseLocals');
+var appLocals = require('./locals');
+var viewHelpers = require('./helpers');
 
 var pages = require('./routes/pages');
 var posts = require('./routes/posts');
+var topics = require('./routes/topics');
 var news =  require('./routes/news');
 var users = require('./routes/users');
 
@@ -17,7 +24,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 app.use(expressLayouts);
 
 // helmet for security
@@ -49,9 +56,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 var csrfMiddleware = csurf({ cookie: true });
 app.use(csrfMiddleware);
 
+app.locals = Object.assign(viewHelpers, appLocals);
+app.use(responseLocals);
+
 // route namespaces
 app.use('/', pages);
 app.use('/posts', posts);
+app.use('/topics', topics);
 app.use('/news', news);
 app.use('/users', users);
 

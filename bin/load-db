@@ -1,0 +1,33 @@
+// NewsItem
+const NewsItem = require('./app/models/news_item')
+new NewsItem({
+  title: 'How to use React’s experimental new Profiler feature',
+  submittedAt: new Date('2017-11-29T12:32:55Z').toDateString(),
+  url: 'http://medium.com/awin/abcd',
+  domain: 'medium.com',
+  tags: 'react,medium'
+}).save()
+
+
+const Post = require('./app/models/post')
+new Post({
+    title: 'Getting started with Cypress automation',
+    description: 'Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.',
+    author: 'Awin Abi',
+    publishedAt: new Date('2017-12-21T12:32:55Z'),
+    tags: 'affiliates, reseller tips',
+    featured: false
+}).save()
+
+new Post({
+    title: 'MobX Introduction in Ionic Apps',
+    description: 'Up maids me an ample stood given. Certainty say suffering his him collected intention promotion. Hill sold ham men made lose case. Views abode law heard jokes too. Was are delightful solicitude discovered collecting man day. Resolving neglected sir tolerably but existence conveying for. Day his put off unaffected literature partiality inhabiting.',
+    author: 'Awin Abi',
+    publishedAt: new Date('2017-12-21T12:32:55Z'),
+    tags: 'featured,ionic',
+    featured: true
+  }).save()
+
+Post.fetchAll().then((rows) => {
+  posts = rows.serialize();
+});

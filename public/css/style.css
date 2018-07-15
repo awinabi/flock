@@ -14254,7 +14254,7 @@ input:focus {
 @media (max-width: 991px) {
   .navbar.default-layout {
     flex-direction: row; }
-    
+
   .navbar-collapse {
     display: flex;
     margin-top: 0.5rem; } }
@@ -14508,7 +14508,7 @@ pre {
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #e2e2e2;
   font-size: calc(13px - 0.05rem);
   font-family: "Nunito", sans-serif; }
   .footer a {
@@ -16583,6 +16583,9 @@ ul {
   padding: 10px 0;
   border-bottom: 1px solid #EFEFEF;
 }
+.news-item:last-child{
+  border-bottom: 0;
+}
 .post-item{
   border-bottom: 1px solid #DEDEDE;
 }
@@ -16594,4 +16597,7 @@ ul {
 }
 .brand-style {
   font-family:'Baloo';
+}
+.badge.text-large {
+  font-size: 1rem;
 }

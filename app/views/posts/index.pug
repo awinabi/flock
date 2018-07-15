@@ -1,0 +1,52 @@
+include featuredPost
+
+
+if featuredPosts.length > 0
+  .mb-2
+    .row
+      .col-lg-12
+        .card.featured-posts
+          .card-body
+            +featuredPost(featuredPosts[0])
+
+  if featuredPosts.length >= 2
+    .row.row-eq-height
+      if featuredPosts.length >= 2
+        .col-lg-6.mt-3
+          .card.featured-posts.second
+            .card-body
+              +featuredPost(featuredPosts[1])
+
+      if featuredPosts.length == 3
+        .col-lg-6.mt-3
+          .card.featured-posts.second
+            .card-body
+              +featuredPost(featuredPosts[2])
+
+.row
+  .col-lg-12
+    if otherPosts.length > 0
+      each post in otherPosts
+        .card
+          .card-body
+            .row.post-item
+              .col-md-12
+                .row.text-gray.d-md-flex.d-none
+                  .col-6.d-flex
+                    p
+                      each postTag in post.tags.split(',')
+                        span.badge.badge-primary.badge-pill= postTag
+                        | &nbsp;
+
+                .row.text-gray.d-md-flex.d-none
+                  .col-6.d-flex
+                    small.mb-0.mr-2.text-muted.text-muted Posted By
+                    small.Last-responded.mr-2.mb-0.text-muted.text-muted= post.author
+                    small.Last-responded.mr-2.mb-0.text-muted.text-muted 3 hours ago
+                .d-flex
+                  h3.mb-0.ellipsis= post.title
+                p.text-gray.my-2= post.description
+    else
+      .card
+        .card-body
+          p No posts found.

@@ -74,3 +74,7 @@ typings/
 
 # MacOS
 .DS_Store
+
+#db
+.sqlite3
+db/*.sqlite3

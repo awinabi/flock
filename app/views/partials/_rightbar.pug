@@ -1,0 +1,46 @@
+.section
+  .p-3.bg-secondary
+    h4.mb-0.text-github
+      b Subscribe to #{site.title}
+  .card
+    .card-body
+      .wrapper
+
+.section.mt-3
+  .p-3.bg-secondary
+    h4.mb-0.text-github
+      b Trending Topics
+  .card
+    .card-body
+      .wrapper
+        div
+          h3
+            a(href='#')
+              span.badge.badge-primary.badge-pill.text-large Affiliates
+        div
+          h3
+            a(href='#')
+              span.badge.badge-primary.badge-pill.text-large Reseller Tips
+
+.section.mt-3
+  .p-3.bg-secondary
+    h4.mb-0.text-github
+      b Have a question?
+  .card
+    .card-body
+      .wrapper
+        p Found a bug or have a question regarding the content?
+        p
+          | This site is maintained by me and you can reach me at 
+          a(href='#')= site.contactEmail
+
+.section.mt-3
+  .p-3.bg-secondary
+    h4.mb-0.text-github
+      b Follow Us
+  .card
+    .card-body
+      .wrapper
+        a(href=site.twitterUrl)
+          i.fab.fa-twitter
+          | #{site.twitterHandle}

@@ -1,0 +1,38 @@
+nav#sidebar.sidebar.sidebar-offcanvas
+  ul.nav
+    li.nav-item
+      a.nav-link(href='/posts')
+        i.menu-icon.fas.fa-pen-alt.text-behance
+        span.menu-title Posts
+    li.nav-item
+      a.nav-link(href='/news')
+        i.menu-icon.fas.fa-bullhorn.text-warning
+        span.menu-title Elsewhere
+
+    each featuredCategory in site.featuredCategories
+      li.nav-item
+        a.nav-link(href='/topics/' + featuredCategory.code)
+          i.menu-icon.text-pinterest(class=featuredCategory.icon)
+          span.menu-title= featuredCategory.name
+
+    li.nav-item.d-lg-none
+      a.nav-link(href='#')
+        i.menu-icon.fas.fa-user.text-dark
+        span.menu-title My Profile
+    li.nav-item.d-lg-none
+      a.nav-link(href='#')
+        i.menu-icon.fas.fa-sliders-h.text-dark
+        span.menu-title Settings
+    li.nav-item.d-lg-none
+      a.nav-link(href='#')
+        i.menu-icon.fas.fa-sign-out-alt.text-danger
+        span.menu-title Sign Out
+  hr
+  .today.mt-3
+    p= new Date().toDateString()
+    p
+      b Quote of the Day
+    p
+      | Lighten up, just enjoy life, smile more, laugh more, and don't get so worked up about things.
+      br
+      small Kenneth Branagh

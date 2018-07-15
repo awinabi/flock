@@ -1,0 +1,23 @@
+.row
+  .col-lg-12
+    .card
+      .card-body
+        if newsItems.length > 0
+          each newsItem in newsItems
+            .row.news-item
+              .col-md-12
+                .d-flex
+                  a(href=newsItem.url)
+                    b.mb-0.ellipsis= newsItem.title
+                  | &nbsp;
+                  span.small (#{newsItem.domain})
+                .stats
+                  p.text-gray.mb-0
+                    small
+                      small.Last-responded.mr-2.mb-0.text-muted.text-muted submitted 3 hours ago
+                      span.px-1
+                      each newsTag in newsItem.tags.split(',')
+                        span.badge.badge-primary.badge-xs= newsTag
+                        | &nbsp;
+        else 
+          p No items found
