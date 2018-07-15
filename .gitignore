@@ -1,3 +1,6 @@
+app.yaml
+database.txt
+
 # Logs
 logs
 *.log

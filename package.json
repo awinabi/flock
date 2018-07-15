@@ -1,6 +1,6 @@
 {
-  "name": "testnews",
-  "version": "0.0.0",
+  "name": "marketzi",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",

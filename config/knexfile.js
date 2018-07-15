@@ -37,10 +37,13 @@ module.exports = {
 
   production: {
     client: 'postgresql',
+    debug: true,
     connection: {
-      database: 'starterapps',
-      user: 'sapp',
-      password: 'password',
+      database: process.env.SQL_DATABASE,
+      user: process.env.SQL_USER,
+      password: process.env.SQL_PASSWORD,
+      host: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
+      // host: process.env.SQL_HOST,
     },
     pool: {
       min: 2,
@@ -48,7 +51,7 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations',
-      directory: __dirname + '../migrations',
+      directory: __dirname + '/../migrations',
     },
   },
 

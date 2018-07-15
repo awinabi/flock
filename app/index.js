@@ -16,6 +16,7 @@ var viewHelpers = require('./helpers');
 
 var pages = require('./routes/pages');
 var posts = require('./routes/posts');
+var admin = require('./routes/admin');
 var topics = require('./routes/topics');
 var news =  require('./routes/news');
 var users = require('./routes/users');
@@ -62,6 +63,7 @@ app.use(responseLocals);
 // route namespaces
 app.use('/', pages);
 app.use('/posts', posts);
+app.use('/captainsdeck', admin);
 app.use('/topics', topics);
 app.use('/news', news);
 app.use('/users', users);
