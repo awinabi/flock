@@ -1,17 +1,17 @@
 
 module.exports = {
   site: {
-    title: 'Marketzi',
-    tagline: 'Boost Sales With Your Partners',
-    description: 'Welcome to Marketzi. Tips to boost sales with your partner network.',
-    twitterHandle: '@Marketzi',
-    twitterUrl: 'https://twitter.com/marketzi',
-    githubUrl: 'https://github.com/marketzi',
+    title: 'Flock',
+    tagline: 'Grow you community',
+    description: 'Welcome to Flock. Flock helps you to manage and run your community',
+    twitterHandle: '@_flock_community',
+    twitterUrl: 'https://twitter.com/_flock_community',
+    githubUrl: 'https://github.com/awinabi/flock',
     author: 'Awin Abi',
-    authorEmail: 'awin@marketzi.com',
+    authorEmail: 'awin@example.com',
     authorTwitterHandle: '@AwinAbi',
     authorTwitterUrl: 'https://twitter.com/awinabi',
-    contactEmail: 'awin@marketzi.com',
+    contactEmail: 'awin@example.com',
     featuredCategories: [
       {
         name: 'Affiliates',
